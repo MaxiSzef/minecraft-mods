@@ -1,87 +1,167 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minecraft Mods Hub</title>
-
-  <style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ModHub</title>
+<style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0f0f14;
+        color: #fff;
     }
 
     header {
-      background: #111827;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #22c55e;
+        background: #1a1a22;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    header h1 {
-      margin: 0;
-      color: #22c55e;
+    .logo {
+        font-size: 20px;
+        font-weight: bold;
+        color: #7c5cff;
+    }
+
+    .search input {
+        padding: 8px;
+        width: 300px;
+        border-radius: 6px;
+        border: none;
+        outline: none;
     }
 
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
+        display: flex;
     }
 
-    .mod {
-      background: #111827;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 10px;
-      border: 1px solid #1f2937;
+    aside {
+        width: 220px;
+        background: #161621;
+        padding: 20px;
+        min-height: 100vh;
     }
 
-    .mod h2 {
-      margin: 0;
-      color: #facc15;
+    aside h3 {
+        margin-top: 0;
+        color: #aaa;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 12px;
-      background: #22c55e;
-      color: black;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+    aside ul {
+        list-style: none;
+        padding: 0;
     }
-  </style>
+
+    aside li {
+        padding: 8px 0;
+        color: #ddd;
+        cursor: pointer;
+    }
+
+    main {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 15px;
+    }
+
+    .card {
+        background: #1c1c28;
+        padding: 15px;
+        border-radius: 10px;
+        transition: 0.2s;
+    }
+
+    .card:hover {
+        transform: scale(1.03);
+        background: #242437;
+    }
+
+    .card h4 {
+        margin: 0 0 10px 0;
+    }
+
+    .tag {
+        font-size: 12px;
+        color: #aaa;
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 8px;
+        width: 100%;
+        border: none;
+        border-radius: 6px;
+        background: #7c5cff;
+        color: white;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #6848ff;
+    }
+</style>
 </head>
-
 <body>
 
 <header>
-  <h1>🔥 Minecraft Mods Hub</h1>
+    <div class="logo">ModHub</div>
+    <div class="search">
+        <input type="text" placeholder="Szukaj modów...">
+    </div>
 </header>
 
 <div class="container">
 
-  <div class="mod">
-    <h2>Super Tools Mod</h2>
-    <p>Lepsze narzędzia i szybsze kopanie.</p>
-    <a class="btn" href="#">Pobierz</a>
-  </div>
+<aside>
+    <h3>Kategorie</h3>
+    <ul>
+        <li>Popularne</li>
+        <li>Nowe</li>
+        <li>Fabric</li>
+        <li>Forge</li>
+        <li>Pakiety modów</li>
+    </ul>
+</aside>
 
-  <div class="mod">
-    <h2>Better Animals Mod</h2>
-    <p>Nowe zwierzęta i ulepszone AI mobów.</p>
-    <a class="btn" href="#">Pobierz</a>
-  </div>
+<main>
+    <h2>Popularne mody</h2>
 
-  <div class="mod">
-    <h2>Lucky Blocks Mod</h2>
-    <p>Losowe nagrody i pułapki.</p>
-    <a class="btn" href="#">Pobierz</a>
-  </div>
+    <div class="grid">
+
+        <div class="card">
+            <h4>Better Tools</h4>
+            <div class="tag">Forge • 1.20+</div>
+            <button>Pobierz</button>
+        </div>
+
+        <div class="card">
+            <h4>Magic Expansion</h4>
+            <div class="tag">Fabric • 1.19+</div>
+            <button>Pobierz</button>
+        </div>
+
+        <div class="card">
+            <h4>FPS Booster</h4>
+            <div class="tag">All versions</div>
+            <button>Pobierz</button>
+        </div>
+
+        <div class="card">
+            <h4>Biomes Plus</h4>
+            <div class="tag">Forge • 1.18+</div>
+            <button>Pobierz</button>
+        </div>
+
+    </div>
+</main>
 
 </div>
 
