@@ -1,169 +1,136 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>ModHub</title>
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #0f0f14;
-        color: #fff;
-    }
-
-    header {
-        background: #1a1a22;
-        padding: 15px 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        font-size: 20px;
-        font-weight: bold;
-        color: #7c5cff;
-    }
-
-    .search input {
-        padding: 8px;
-        width: 300px;
-        border-radius: 6px;
-        border: none;
-        outline: none;
-    }
-
-    .container {
-        display: flex;
-    }
-
-    aside {
-        width: 220px;
-        background: #161621;
-        padding: 20px;
-        min-height: 100vh;
-    }
-
-    aside h3 {
-        margin-top: 0;
-        color: #aaa;
-    }
-
-    aside ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    aside li {
-        padding: 8px 0;
-        color: #ddd;
-        cursor: pointer;
-    }
-
-    main {
-        flex: 1;
-        padding: 20px;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 15px;
-    }
-
-    .card {
-        background: #1c1c28;
-        padding: 15px;
-        border-radius: 10px;
-        transition: 0.2s;
-    }
-
-    .card:hover {
-        transform: scale(1.03);
-        background: #242437;
-    }
-
-    .card h4 {
-        margin: 0 0 10px 0;
-    }
-
-    .tag {
-        font-size: 12px;
-        color: #aaa;
-    }
-
-    button {
-        margin-top: 10px;
-        padding: 8px;
-        width: 100%;
-        border: none;
-        border-radius: 6px;
-        background: #7c5cff;
-        color: white;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background: #6848ff;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Developer & Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-zinc-950 text-zinc-100">
 
-<header>
-    <div class="logo">ModHub</div>
-    <div class="search">
-        <input type="text" placeholder="Szukaj modów...">
-    </div>
-</header>
-
-<div class="container">
-
-<aside>
-    <h3>Kategorie</h3>
-    <ul>
-        <li>Popularne</li>
-        <li>Nowe</li>
-        <li>Fabric</li>
-        <li>Forge</li>
-        <li>Pakiety modów</li>
-    </ul>
-</aside>
-
-<main>
-    <h2>Popularne mody</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h4>Better Tools</h4>
-            <div class="tag">Forge • 1.20+</div>
-            <button>Pobierz</button>
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">YourName</h1>
+            <div class="space-x-8 hidden md:flex">
+                <a href="#about" class="hover:text-emerald-400 transition">About</a>
+                <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+                <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+            </div>
+            <a href="https://github.com/yourusername" target="_blank"
+               class="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 px-4 py-2 rounded-lg transition">
+                <i class="fab fa-github"></i>
+                GitHub
+            </a>
         </div>
+    </nav>
 
-        <div class="card">
-            <h4>Magic Expansion</h4>
-            <div class="tag">Fabric • 1.19+</div>
-            <button>Pobierz</button>
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                    Hi, I'm <span class="text-emerald-400">Your Name</span>
+                </h2>
+                <p class="text-2xl text-zinc-400 mb-8">
+                    Full Stack Developer &amp; Creative Builder
+                </p>
+                <p class="text-zinc-400 text-lg max-w-lg mb-10">
+                    I create beautiful, functional web experiences. Passionate about clean code, 
+                    modern design, and open source.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#projects" 
+                       class="bg-emerald-500 hover:bg-emerald-600 px-8 py-4 rounded-xl font-medium transition">
+                        View My Work
+                    </a>
+                    <a href="#contact" 
+                       class="border border-zinc-700 hover:border-zinc-400 px-8 py-4 rounded-xl font-medium transition">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+            
+            <div class="flex justify-center">
+                <img src="https://via.placeholder.com/500" 
+                     alt="Your Profile Picture"
+                     class="w-80 h-80 object-cover rounded-3xl shadow-2xl border border-zinc-700">
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-            <h4>FPS Booster</h4>
-            <div class="tag">All versions</div>
-            <button>Pobierz</button>
+    <!-- About -->
+    <section id="about" class="py-24 bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+            <div class="max-w-3xl mx-auto text-zinc-300 text-lg leading-relaxed">
+                <p class="mb-6">
+                    I'm a passionate developer with experience building modern web applications. 
+                    I love turning ideas into reality using the latest technologies.
+                </p>
+                <p>
+                    Currently focused on <span class="text-emerald-400">React, Next.js, Tailwind CSS</span>, 
+                    and full-stack development with Node.js and databases.
+                </p>
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-            <h4>Biomes Plus</h4>
-            <div class="tag">Forge • 1.18+</div>
-            <button>Pobierz</button>
+    <!-- Projects -->
+    <section id="projects" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card -->
+                <div class="bg-zinc-900 rounded-2xl overflow-hidden group">
+                    <img src="https://via.placeholder.com/600x400" class="w-full h-48 object-cover group-hover:scale-105 transition" alt="Project">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Project Title One</h3>
+                        <p class="text-zinc-400 mb-4">Short description of what you built and the technologies used.</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">React</span>
+                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">Tailwind</span>
+                        </div>
+                        <a href="#" class="mt-6 inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300">
+                            View Project <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Add more project cards here -->
+            </div>
         </div>
+    </section>
 
-    </div>
-</main>
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6">Let's Work Together</h2>
+            <p class="text-zinc-400 mb-10 max-w-md mx-auto">
+                I'm always open to interesting opportunities and collaborations.
+            </p>
+            <a href="mailto:youremail@example.com" 
+               class="inline-block bg-white text-zinc-900 px-10 py-5 rounded-2xl font-semibold text-lg hover:bg-emerald-400 transition">
+                Say Hello 👋
+            </a>
+        </div>
+    </section>
 
-</div>
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-zinc-800">
+        <div class="max-w-6xl mx-auto px-6 text-center text-zinc-500">
+            <p>© 2026 Your Name. Built with ❤️ and deployed on GitHub Pages.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
