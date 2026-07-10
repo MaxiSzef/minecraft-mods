@@ -3,132 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Developer & Designer</title>
+    <title>YourName | Modrinth Creator</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-        }
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .modrinth-green { color: #22c55e; }
         .hero-bg {
             background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
     </style>
 </head>
 <body class="bg-zinc-950 text-zinc-100">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-white">YourName</h1>
-            <div class="space-x-8 hidden md:flex">
-                <a href="#about" class="hover:text-emerald-400 transition">About</a>
-                <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
-                <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+    <!-- Top Navigation -->
+    <nav class="fixed top-0 w-full bg-zinc-900 border-b border-zinc-800 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center text-black font-bold text-xl">M</div>
+                <h1 class="text-2xl font-bold">YourName</h1>
             </div>
-            <a href="https://github.com/yourusername" target="_blank"
-               class="flex items-center gap-2 bg-zinc-800 hover:bg-zinc-700 px-4 py-2 rounded-lg transition">
-                <i class="fab fa-github"></i>
-                GitHub
-            </a>
+            
+            <div class="flex items-center gap-8 text-sm">
+                <a href="#mods" class="hover:text-emerald-400 transition">Mods</a>
+                <a href="#about" class="hover:text-emerald-400 transition">About</a>
+                <a href="https://modrinth.com/user/yourusername" target="_blank" 
+                   class="flex items-center gap-2 hover:text-emerald-400 transition">
+                    <i class="fab fa-modrinth"></i> Modrinth
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" 
+                   class="flex items-center gap-2 hover:text-emerald-400 transition">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero-bg min-h-screen flex items-center pt-20">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
-                    Hi, I'm <span class="text-emerald-400">Your Name</span>
-                </h2>
+                <span class="text-emerald-400 text-sm font-medium tracking-widest">MINECRAFT MOD DEVELOPER</span>
+                <h1 class="text-6xl font-bold leading-tight mt-4 mb-6">
+                    Hi, I'm <span class="modrinth-green">YourName</span>
+                </h1>
                 <p class="text-2xl text-zinc-400 mb-8">
-                    Full Stack Developer &amp; Creative Builder
+                    Creating high-quality mods for Fabric &amp; Forge
                 </p>
-                <p class="text-zinc-400 text-lg max-w-lg mb-10">
-                    I create beautiful, functional web experiences. Passionate about clean code, 
-                    modern design, and open source.
-                </p>
-                <div class="flex gap-4">
-                    <a href="#projects" 
-                       class="bg-emerald-500 hover:bg-emerald-600 px-8 py-4 rounded-xl font-medium transition">
-                        View My Work
+                <div class="flex items-center gap-4">
+                    <a href="#mods" 
+                       class="bg-emerald-500 hover:bg-emerald-600 text-black font-semibold px-8 py-4 rounded-2xl flex items-center gap-2 transition">
+                        <i class="fas fa-download"></i>
+                        Browse My Mods
                     </a>
-                    <a href="#contact" 
-                       class="border border-zinc-700 hover:border-zinc-400 px-8 py-4 rounded-xl font-medium transition">
-                        Get In Touch
+                    <a href="https://modrinth.com/user/yourusername" target="_blank"
+                       class="border border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 px-8 py-4 rounded-2xl font-medium transition">
+                        View on Modrinth →
                     </a>
                 </div>
             </div>
             
             <div class="flex justify-center">
-                <img src="https://via.placeholder.com/500" 
-                     alt="Your Profile Picture"
-                     class="w-80 h-80 object-cover rounded-3xl shadow-2xl border border-zinc-700">
+                <img src="https://via.placeholder.com/600x500/22c55e/0a0a0a?text=Your+Mod+Banner" 
+                     alt="Mod Banner" class="rounded-3xl shadow-2xl border border-emerald-900">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Mods -->
+    <section id="mods" class="py-20 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 flex items-center gap-3">
+                <i class="fas fa-cubes"></i> My Mods
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Mod Card 1 -->
+                <div class="bg-zinc-800 rounded-3xl overflow-hidden card-hover transition-all">
+                    <img src="https://via.placeholder.com/600x300" class="w-full h-48 object-cover" alt="Mod">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-2xl font-semibold">Mod Name Here</h3>
+                            <span class="text-xs bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full">Fabric</span>
+                        </div>
+                        <p class="text-zinc-400 mt-2 mb-4 line-clamp-2">
+                            Short description of your mod. What it does and why players love it.
+                        </p>
+                        <div class="flex items-center gap-6 text-sm text-zinc-400">
+                            <div><i class="fas fa-download"></i> 12.4k</div>
+                            <div><i class="fas fa-heart"></i> 98%</div>
+                        </div>
+                        <a href="#" class="mt-6 block text-center bg-zinc-700 hover:bg-emerald-500 hover:text-black py-3 rounded-2xl font-medium transition">
+                            View on Modrinth
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Add more mod cards like this -->
+                <!-- Duplicate the block above for more mods -->
             </div>
         </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="py-24 bg-zinc-900">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
-            <div class="max-w-3xl mx-auto text-zinc-300 text-lg leading-relaxed">
-                <p class="mb-6">
-                    I'm a passionate developer with experience building modern web applications. 
-                    I love turning ideas into reality using the latest technologies.
-                </p>
-                <p>
-                    Currently focused on <span class="text-emerald-400">React, Next.js, Tailwind CSS</span>, 
-                    and full-stack development with Node.js and databases.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="py-24">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">Featured Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card -->
-                <div class="bg-zinc-900 rounded-2xl overflow-hidden group">
-                    <img src="https://via.placeholder.com/600x400" class="w-full h-48 object-cover group-hover:scale-105 transition" alt="Project">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Project Title One</h3>
-                        <p class="text-zinc-400 mb-4">Short description of what you built and the technologies used.</p>
-                        <div class="flex gap-2">
-                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">React</span>
-                            <span class="text-xs bg-zinc-800 px-3 py-1 rounded-full">Tailwind</span>
-                        </div>
-                        <a href="#" class="mt-6 inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300">
-                            View Project <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Add more project cards here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-24 bg-zinc-900">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-6">Let's Work Together</h2>
-            <p class="text-zinc-400 mb-10 max-w-md mx-auto">
-                I'm always open to interesting opportunities and collaborations.
+    <section id="about" class="py-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">About Me</h2>
+            <p class="text-zinc-300 text-lg leading-relaxed">
+                I'm a passionate Minecraft mod developer focused on creating useful, performant, 
+                and fun mods for the community. I mainly develop for Fabric, with some Forge support.
             </p>
-            <a href="mailto:youremail@example.com" 
-               class="inline-block bg-white text-zinc-900 px-10 py-5 rounded-2xl font-semibold text-lg hover:bg-emerald-400 transition">
-                Say Hello 👋
-            </a>
+            <div class="flex justify-center gap-8 mt-12 text-sm">
+                <div>
+                    <div class="text-3xl font-bold text-emerald-400">15+</div>
+                    <div class="text-zinc-400">Mods Created</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-emerald-400">250k+</div>
+                    <div class="text-zinc-400">Total Downloads</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-emerald-400">3</div>
+                    <div class="text-zinc-400">Years Experience</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-8 border-t border-zinc-800">
-        <div class="max-w-6xl mx-auto px-6 text-center text-zinc-500">
-            <p>© 2026 Your Name. Built with ❤️ and deployed on GitHub Pages.</p>
+    <footer class="bg-black py-12 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-zinc-500">
+                © 2026 YourName • Minecraft Mod Developer
+            </p>
+            <div class="flex justify-center gap-6 mt-6 text-2xl">
+                <a href="https://modrinth.com/user/yourusername" target="_blank" class="hover:text-emerald-400"><i class="fab fa-modrinth"></i></a>
+                <a href="https://github.com/yourusername" target="_blank" class="hover:text-emerald-400"><i class="fab fa-github"></i></a>
+                <a href="https://discord.gg/yourserver" target="_blank" class="hover:text-emerald-400"><i class="fab fa-discord"></i></a>
+            </div>
         </div>
     </footer>
 
